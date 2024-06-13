@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище potteryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="color_table">
+    <Key>
+      <PropertyRef Name="id_color" />
+    </Key>
+    <Property Name="color_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_color" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="course_group_table">
+    <Key>
+      <PropertyRef Name="id_course_group" />
+    </Key>
+    <Property Name="id_course_group" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_name_group" Type="int" Nullable="false" />
+    <Property Name="counte_person" Type="int" Nullable="false" />
+    <Property Name="first_date" Type="date" />
+    <Property Name="last_date" Type="date" />
+    <Property Name="curator_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dolzhnost_table">
+    <Key>
+      <PropertyRef Name="id_dolzhnost" />
+    </Key>
+    <Property Name="dolzhnost_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_dolzhnost" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="info_course_table">
+    <Key>
+      <PropertyRef Name="id_course" />
+    </Key>
+    <Property Name="id_course" Type="int" Nullable="false" />
+    <Property Name="name_course" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="number_hours" Type="int" Nullable="false" />
+    <Property Name="price" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kategory_product_table">
+    <Key>
+      <PropertyRef Name="id_kategory" />
+    </Key>
+    <Property Name="id_kategory" Type="int" Nullable="false" />
+    <Property Name="name_kategory" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="klient_table">
+    <Key>
+      <PropertyRef Name="id_klient" />
+    </Key>
+    <Property Name="id_klient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_klient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="surname_klient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number_klient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="e_mail_klient" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="material_category_table">
+    <Key>
+      <PropertyRef Name="id_category" />
+    </Key>
+    <Property Name="material_category_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_category" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="material_table">
+    <Key>
+      <PropertyRef Name="id_material" />
+    </Key>
+    <Property Name="id_material" Type="int" Nullable="false" />
+    <Property Name="name_material" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="color_id" Type="int" />
+    <Property Name="proizvoditel_id" Type="int" />
+    <Property Name="count_package" Type="int" Nullable="false" />
+    <Property Name="weight_kg" Type="float" Nullable="false" />
+    <Property Name="srok_godnosti" Type="date" />
+    <Property Name="barcode" Type="int" Nullable="false" />
+    <Property Name="ogneypornost_id" Type="int" />
+    <Property Name="material_category_id" Type="int" Nullable="false" />
+    <Property Name="postavshik_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ogneypornost_table">
+    <Key>
+      <PropertyRef Name="id_ogneypornost" />
+    </Key>
+    <Property Name="ogneypornost_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="max_temperatura_C" Type="int" Nullable="false" />
+    <Property Name="id_ogneypornost" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="postavshiki_table">
+    <Key>
+      <PropertyRef Name="id_postavshika" />
+    </Key>
+    <Property Name="id_postavshika" Type="int" Nullable="false" />
+    <Property Name="name_postavshik" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="index_postavshik" Type="nvarchar" MaxLength="50" />
+    <Property Name="surname_director" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_director" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number_postavshik" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="e_mail_postavshik" Type="nvarchar" MaxLength="50" />
+    <Property Name="inn" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="kpp" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product_table">
+    <Key>
+      <PropertyRef Name="id_product" />
+    </Key>
+    <Property Name="id_product" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="articul" Type="int" Nullable="false" />
+    <Property Name="name_product" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="category_product" Type="int" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="material_id" Type="int" />
+    <Property Name="color_id" Type="int" Nullable="false" />
+    <Property Name="master_id" Type="int" Nullable="false" />
+    <Property Name="lenght" Type="float" />
+    <Property Name="width" Type="float" />
+    <Property Name="height" Type="float" />
+    <Property Name="photo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="proizvoditeli_table">
+    <Key>
+      <PropertyRef Name="id_proizvoditel" />
+    </Key>
+    <Property Name="name_proizvoditel" Type="nvarchar" MaxLength="50" />
+    <Property Name="id_proizvoditel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="registration_table">
+    <Key>
+      <PropertyRef Name="id_registration" />
+    </Key>
+    <Property Name="id_registration" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="klient" Type="int" Nullable="false" />
+    <Property Name="course" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="workers_table">
+    <Key>
+      <PropertyRef Name="id_workers" />
+    </Key>
+    <Property Name="id_workers" Type="int" Nullable="false" />
+    <Property Name="surname_workers" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_workers" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="otchestvo_workers" Type="nvarchar" MaxLength="50" />
+    <Property Name="dolznost_id" Type="int" Nullable="false" />
+    <Property Name="phone_number_workers" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="street" Type="nvarchar" MaxLength="50" />
+    <Property Name="house" Type="nvarchar" MaxLength="50" />
+    <Property Name="kvartira" Type="nvarchar" MaxLength="50" />
+    <Property Name="date_rozhdeniya" Type="date" Nullable="false" />
+    <Property Name="date_priema_na_raboty" Type="date" Nullable="false" />
+    <Property Name="oklad_no_nds" Type="int" Nullable="false" />
+    <Property Name="login" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_course_group_table_info_course_table">
+    <End Role="info_course_table" Type="Self.info_course_table" Multiplicity="1" />
+    <End Role="course_group_table" Type="Self.course_group_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="info_course_table">
+        <PropertyRef Name="id_course" />
+      </Principal>
+      <Dependent Role="course_group_table">
+        <PropertyRef Name="id_name_group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_course_group_table_workers_table">
+    <End Role="workers_table" Type="Self.workers_table" Multiplicity="1" />
+    <End Role="course_group_table" Type="Self.course_group_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="workers_table">
+        <PropertyRef Name="id_workers" />
+      </Principal>
+      <Dependent Role="course_group_table">
+        <PropertyRef Name="curator_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_material_table_color_table">
+    <End Role="color_table" Type="Self.color_table" Multiplicity="0..1" />
+    <End Role="material_table" Type="Self.material_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="color_table">
+        <PropertyRef Name="id_color" />
+      </Principal>
+      <Dependent Role="material_table">
+        <PropertyRef Name="color_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_material_table_material_category_table">
+    <End Role="material_category_table" Type="Self.material_category_table" Multiplicity="1" />
+    <End Role="material_table" Type="Self.material_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="material_category_table">
+        <PropertyRef Name="id_category" />
+      </Principal>
+      <Dependent Role="material_table">
+        <PropertyRef Name="material_category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_material_table_ogneypornost_table">
+    <End Role="ogneypornost_table" Type="Self.ogneypornost_table" Multiplicity="0..1" />
+    <End Role="material_table" Type="Self.material_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ogneypornost_table">
+        <PropertyRef Name="id_ogneypornost" />
+      </Principal>
+      <Dependent Role="material_table">
+        <PropertyRef Name="ogneypornost_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_material_table_postavshiki_table">
+    <End Role="postavshiki_table" Type="Self.postavshiki_table" Multiplicity="1" />
+    <End Role="material_table" Type="Self.material_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="postavshiki_table">
+        <PropertyRef Name="id_postavshika" />
+      </Principal>
+      <Dependent Role="material_table">
+        <PropertyRef Name="postavshik_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_material_table_proizvoditeli_table">
+    <End Role="proizvoditeli_table" Type="Self.proizvoditeli_table" Multiplicity="0..1" />
+    <End Role="material_table" Type="Self.material_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="proizvoditeli_table">
+        <PropertyRef Name="id_proizvoditel" />
+      </Principal>
+      <Dependent Role="material_table">
+        <PropertyRef Name="proizvoditel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_table_color_table">
+    <End Role="color_table" Type="Self.color_table" Multiplicity="1" />
+    <End Role="product_table" Type="Self.product_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="color_table">
+        <PropertyRef Name="id_color" />
+      </Principal>
+      <Dependent Role="product_table">
+        <PropertyRef Name="color_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_table_kategory_product_table">
+    <End Role="kategory_product_table" Type="Self.kategory_product_table" Multiplicity="1" />
+    <End Role="product_table" Type="Self.product_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategory_product_table">
+        <PropertyRef Name="id_kategory" />
+      </Principal>
+      <Dependent Role="product_table">
+        <PropertyRef Name="category_product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_table_material_table">
+    <End Role="material_table" Type="Self.material_table" Multiplicity="0..1" />
+    <End Role="product_table" Type="Self.product_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="material_table">
+        <PropertyRef Name="id_material" />
+      </Principal>
+      <Dependent Role="product_table">
+        <PropertyRef Name="material_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_table_workers_table">
+    <End Role="workers_table" Type="Self.workers_table" Multiplicity="1" />
+    <End Role="product_table" Type="Self.product_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="workers_table">
+        <PropertyRef Name="id_workers" />
+      </Principal>
+      <Dependent Role="product_table">
+        <PropertyRef Name="master_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_registration_table_course_group_table">
+    <End Role="course_group_table" Type="Self.course_group_table" Multiplicity="1" />
+    <End Role="registration_table" Type="Self.registration_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course_group_table">
+        <PropertyRef Name="id_course_group" />
+      </Principal>
+      <Dependent Role="registration_table">
+        <PropertyRef Name="course" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_registration_table_klient_table">
+    <End Role="klient_table" Type="Self.klient_table" Multiplicity="1" />
+    <End Role="registration_table" Type="Self.registration_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="klient_table">
+        <PropertyRef Name="id_klient" />
+      </Principal>
+      <Dependent Role="registration_table">
+        <PropertyRef Name="klient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_workers_table_dolzhnost_table">
+    <End Role="dolzhnost_table" Type="Self.dolzhnost_table" Multiplicity="1" />
+    <End Role="workers_table" Type="Self.workers_table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dolzhnost_table">
+        <PropertyRef Name="id_dolzhnost" />
+      </Principal>
+      <Dependent Role="workers_table">
+        <PropertyRef Name="dolznost_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище potteryModelContainer">
+    <EntitySet Name="color_table" EntityType="Self.color_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="course_group_table" EntityType="Self.course_group_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dolzhnost_table" EntityType="Self.dolzhnost_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="info_course_table" EntityType="Self.info_course_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kategory_product_table" EntityType="Self.kategory_product_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="klient_table" EntityType="Self.klient_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="material_category_table" EntityType="Self.material_category_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="material_table" EntityType="Self.material_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ogneypornost_table" EntityType="Self.ogneypornost_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="postavshiki_table" EntityType="Self.postavshiki_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_table" EntityType="Self.product_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="proizvoditeli_table" EntityType="Self.proizvoditeli_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="registration_table" EntityType="Self.registration_table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="workers_table" EntityType="Self.workers_table" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_course_group_table_info_course_table" Association="Self.FK_course_group_table_info_course_table">
+      <End Role="info_course_table" EntitySet="info_course_table" />
+      <End Role="course_group_table" EntitySet="course_group_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_course_group_table_workers_table" Association="Self.FK_course_group_table_workers_table">
+      <End Role="workers_table" EntitySet="workers_table" />
+      <End Role="course_group_table" EntitySet="course_group_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_material_table_color_table" Association="Self.FK_material_table_color_table">
+      <End Role="color_table" EntitySet="color_table" />
+      <End Role="material_table" EntitySet="material_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_material_table_material_category_table" Association="Self.FK_material_table_material_category_table">
+      <End Role="material_category_table" EntitySet="material_category_table" />
+      <End Role="material_table" EntitySet="material_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_material_table_ogneypornost_table" Association="Self.FK_material_table_ogneypornost_table">
+      <End Role="ogneypornost_table" EntitySet="ogneypornost_table" />
+      <End Role="material_table" EntitySet="material_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_material_table_postavshiki_table" Association="Self.FK_material_table_postavshiki_table">
+      <End Role="postavshiki_table" EntitySet="postavshiki_table" />
+      <End Role="material_table" EntitySet="material_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_material_table_proizvoditeli_table" Association="Self.FK_material_table_proizvoditeli_table">
+      <End Role="proizvoditeli_table" EntitySet="proizvoditeli_table" />
+      <End Role="material_table" EntitySet="material_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_table_color_table" Association="Self.FK_product_table_color_table">
+      <End Role="color_table" EntitySet="color_table" />
+      <End Role="product_table" EntitySet="product_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_table_kategory_product_table" Association="Self.FK_product_table_kategory_product_table">
+      <End Role="kategory_product_table" EntitySet="kategory_product_table" />
+      <End Role="product_table" EntitySet="product_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_table_material_table" Association="Self.FK_product_table_material_table">
+      <End Role="material_table" EntitySet="material_table" />
+      <End Role="product_table" EntitySet="product_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_table_workers_table" Association="Self.FK_product_table_workers_table">
+      <End Role="workers_table" EntitySet="workers_table" />
+      <End Role="product_table" EntitySet="product_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_registration_table_course_group_table" Association="Self.FK_registration_table_course_group_table">
+      <End Role="course_group_table" EntitySet="course_group_table" />
+      <End Role="registration_table" EntitySet="registration_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_registration_table_klient_table" Association="Self.FK_registration_table_klient_table">
+      <End Role="klient_table" EntitySet="klient_table" />
+      <End Role="registration_table" EntitySet="registration_table" />
+    </AssociationSet>
+    <AssociationSet Name="FK_workers_table_dolzhnost_table" Association="Self.FK_workers_table_dolzhnost_table">
+      <End Role="dolzhnost_table" EntitySet="dolzhnost_table" />
+      <End Role="workers_table" EntitySet="workers_table" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,41 @@
+﻿<Page x:Class="гончарная_мастерская.pages.avtorizaz"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:гончарная_мастерская.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+    Title="Скульптура и форма">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS" FontSize="22" Grid.Row="0"  Grid.Column="3"/>
+        <TextBlock Text="логин" Margin="5" FontFamily="Comic Sans MS" FontSize="18" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center"/>
+        <TextBlock Text="пароль" Margin="5" FontFamily="Comic Sans MS" FontSize="18" Grid.Row="2" Grid.Column="0"   VerticalAlignment="Center"/>
+        <TextBox Height="30" Width="140" Grid.Row="1" Grid.Column="1" x:Name="logintxt"/>
+        <PasswordBox Height="30" Width="140" Grid.Row="2" Grid.Column="1" x:Name="passwordtxt"/>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <CheckBox  x:Name="chkbox" Grid.Row="3"  IsChecked="{Binding IsChecked, Mode=TwoWay}" Margin="0 17 0 0" />
+            <TextBlock Text="запомнить вход"  FontFamily="Comic Sans MS" FontSize="18" TextWrapping="Wrap" Width="100" Margin="5 0 0 0"/>
+        </StackPanel>
+        <Button Grid.Column="0" Grid.Row="4" Height="30" Width="100" Content="войти"  FontFamily="Comic Sans MS" Click="Button_Click" Background="#b24e26" FontSize="16" Foreground="White" />
+    </Grid>
+</Page>

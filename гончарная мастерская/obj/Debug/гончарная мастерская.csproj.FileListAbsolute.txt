@@ -1,0 +1,31 @@
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\гончарная мастерская.exe.config
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\гончарная мастерская.exe
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\гончарная мастерская.pdb
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\EntityFramework.dll
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\EntityFramework.xml
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.csproj.AssemblyReference.cache
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.csproj.SuggestedBindingRedirects.cache
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\MainWindow.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\admin.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\avtorizaz.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\catalog.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\App.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская_Content.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская_MarkupCompile.cache
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская_MarkupCompile.lref
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\MainWindow.baml
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\admin.baml
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\avtorizaz.baml
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\catalog.baml
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.g.resources
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная_мастерская.Properties.Resources.resources
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.csproj.GenerateResource.cache
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.csproj.CoreCompileInputs.cache
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.csproj.CopyComplete
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.exe
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\гончарная мастерская.pdb
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\add_tovar.g.cs
+C:\Users\apoli\по\гончарная мастерская\гончарная мастерская\obj\Debug\pages\add_tovar.baml

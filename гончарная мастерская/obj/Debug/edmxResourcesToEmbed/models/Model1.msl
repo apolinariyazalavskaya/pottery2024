@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище potteryModelContainer" CdmEntityContainer="potteryEntities">
+    <EntitySetMapping Name="color_table">
+      <EntityTypeMapping TypeName="potteryModel.color_table">
+        <MappingFragment StoreEntitySet="color_table">
+          <ScalarProperty Name="color_name" ColumnName="color_name" />
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course_group_table">
+      <EntityTypeMapping TypeName="potteryModel.course_group_table">
+        <MappingFragment StoreEntitySet="course_group_table">
+          <ScalarProperty Name="id_course_group" ColumnName="id_course_group" />
+          <ScalarProperty Name="id_name_group" ColumnName="id_name_group" />
+          <ScalarProperty Name="counte_person" ColumnName="counte_person" />
+          <ScalarProperty Name="first_date" ColumnName="first_date" />
+          <ScalarProperty Name="last_date" ColumnName="last_date" />
+          <ScalarProperty Name="curator_id" ColumnName="curator_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dolzhnost_table">
+      <EntityTypeMapping TypeName="potteryModel.dolzhnost_table">
+        <MappingFragment StoreEntitySet="dolzhnost_table">
+          <ScalarProperty Name="dolzhnost_name" ColumnName="dolzhnost_name" />
+          <ScalarProperty Name="id_dolzhnost" ColumnName="id_dolzhnost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="info_course_table">
+      <EntityTypeMapping TypeName="potteryModel.info_course_table">
+        <MappingFragment StoreEntitySet="info_course_table">
+          <ScalarProperty Name="id_course" ColumnName="id_course" />
+          <ScalarProperty Name="name_course" ColumnName="name_course" />
+          <ScalarProperty Name="number_hours" ColumnName="number_hours" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategory_product_table">
+      <EntityTypeMapping TypeName="potteryModel.kategory_product_table">
+        <MappingFragment StoreEntitySet="kategory_product_table">
+          <ScalarProperty Name="id_kategory" ColumnName="id_kategory" />
+          <ScalarProperty Name="name_kategory" ColumnName="name_kategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="klient_table">
+      <EntityTypeMapping TypeName="potteryModel.klient_table">
+        <MappingFragment StoreEntitySet="klient_table">
+          <ScalarProperty Name="id_klient" ColumnName="id_klient" />
+          <ScalarProperty Name="name_klient" ColumnName="name_klient" />
+          <ScalarProperty Name="surname_klient" ColumnName="surname_klient" />
+          <ScalarProperty Name="phone_number_klient" ColumnName="phone_number_klient" />
+          <ScalarProperty Name="e_mail_klient" ColumnName="e_mail_klient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="material_category_table">
+      <EntityTypeMapping TypeName="potteryModel.material_category_table">
+        <MappingFragment StoreEntitySet="material_category_table">
+          <ScalarProperty Name="material_category_name" ColumnName="material_category_name" />
+          <ScalarProperty Name="id_category" ColumnName="id_category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="material_table">
+      <EntityTypeMapping TypeName="potteryModel.material_table">
+        <MappingFragment StoreEntitySet="material_table">
+          <ScalarProperty Name="id_material" ColumnName="id_material" />
+          <ScalarProperty Name="name_material" ColumnName="name_material" />
+          <ScalarProperty Name="color_id" ColumnName="color_id" />
+          <ScalarProperty Name="proizvoditel_id" ColumnName="proizvoditel_id" />
+          <ScalarProperty Name="count_package" ColumnName="count_package" />
+          <ScalarProperty Name="weight_kg" ColumnName="weight_kg" />
+          <ScalarProperty Name="srok_godnosti" ColumnName="srok_godnosti" />
+          <ScalarProperty Name="barcode" ColumnName="barcode" />
+          <ScalarProperty Name="ogneypornost_id" ColumnName="ogneypornost_id" />
+          <ScalarProperty Name="material_category_id" ColumnName="material_category_id" />
+          <ScalarProperty Name="postavshik_id" ColumnName="postavshik_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ogneypornost_table">
+      <EntityTypeMapping TypeName="potteryModel.ogneypornost_table">
+        <MappingFragment StoreEntitySet="ogneypornost_table">
+          <ScalarProperty Name="ogneypornost_name" ColumnName="ogneypornost_name" />
+          <ScalarProperty Name="max_temperatura_C" ColumnName="max_temperatura_C" />
+          <ScalarProperty Name="id_ogneypornost" ColumnName="id_ogneypornost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="postavshiki_table">
+      <EntityTypeMapping TypeName="potteryModel.postavshiki_table">
+        <MappingFragment StoreEntitySet="postavshiki_table">
+          <ScalarProperty Name="id_postavshika" ColumnName="id_postavshika" />
+          <ScalarProperty Name="name_postavshik" ColumnName="name_postavshik" />
+          <ScalarProperty Name="index_postavshik" ColumnName="index_postavshik" />
+          <ScalarProperty Name="surname_director" ColumnName="surname_director" />
+          <ScalarProperty Name="name_director" ColumnName="name_director" />
+          <ScalarProperty Name="phone_number_postavshik" ColumnName="phone_number_postavshik" />
+          <ScalarProperty Name="e_mail_postavshik" ColumnName="e_mail_postavshik" />
+          <ScalarProperty Name="inn" ColumnName="inn" />
+          <ScalarProperty Name="kpp" ColumnName="kpp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_table">
+      <EntityTypeMapping TypeName="potteryModel.product_table">
+        <MappingFragment StoreEntitySet="product_table">
+          <ScalarProperty Name="id_product" ColumnName="id_product" />
+          <ScalarProperty Name="articul" ColumnName="articul" />
+          <ScalarProperty Name="name_product" ColumnName="name_product" />
+          <ScalarProperty Name="category_product" ColumnName="category_product" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="material_id" ColumnName="material_id" />
+          <ScalarProperty Name="color_id" ColumnName="color_id" />
+          <ScalarProperty Name="master_id" ColumnName="master_id" />
+          <ScalarProperty Name="lenght" ColumnName="lenght" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proizvoditeli_table">
+      <EntityTypeMapping TypeName="potteryModel.proizvoditeli_table">
+        <MappingFragment StoreEntitySet="proizvoditeli_table">
+          <ScalarProperty Name="name_proizvoditel" ColumnName="name_proizvoditel" />
+          <ScalarProperty Name="id_proizvoditel" ColumnName="id_proizvoditel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registration_table">
+      <EntityTypeMapping TypeName="potteryModel.registration_table">
+        <MappingFragment StoreEntitySet="registration_table">
+          <ScalarProperty Name="id_registration" ColumnName="id_registration" />
+          <ScalarProperty Name="klient" ColumnName="klient" />
+          <ScalarProperty Name="course" ColumnName="course" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="potteryModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="workers_table">
+      <EntityTypeMapping TypeName="potteryModel.workers_table">
+        <MappingFragment StoreEntitySet="workers_table">
+          <ScalarProperty Name="id_workers" ColumnName="id_workers" />
+          <ScalarProperty Name="surname_workers" ColumnName="surname_workers" />
+          <ScalarProperty Name="name_workers" ColumnName="name_workers" />
+          <ScalarProperty Name="otchestvo_workers" ColumnName="otchestvo_workers" />
+          <ScalarProperty Name="dolznost_id" ColumnName="dolznost_id" />
+          <ScalarProperty Name="phone_number_workers" ColumnName="phone_number_workers" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="house" ColumnName="house" />
+          <ScalarProperty Name="kvartira" ColumnName="kvartira" />
+          <ScalarProperty Name="date_rozhdeniya" ColumnName="date_rozhdeniya" />
+          <ScalarProperty Name="date_priema_na_raboty" ColumnName="date_priema_na_raboty" />
+          <ScalarProperty Name="oklad_no_nds" ColumnName="oklad_no_nds" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa30b23ddaff473dbf7a1ca8746b5aff" Name="Diagram1">
+        <EntityTypeShape EntityType="potteryModel.color_table" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.course_group_table" Width="1.5" PointX="5.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.dolzhnost_table" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.info_course_table" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.kategory_product_table" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.klient_table" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.material_category_table" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.material_table" Width="1.5" PointX="8.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.ogneypornost_table" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.postavshiki_table" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.product_table" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.proizvoditeli_table" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.registration_table" Width="1.5" PointX="7.5" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="potteryModel.workers_table" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <AssociationConnector Association="potteryModel.FK_material_table_color_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_product_table_color_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_course_group_table_info_course_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_course_group_table_workers_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_registration_table_course_group_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_workers_table_dolzhnost_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_product_table_kategory_product_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_registration_table_klient_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_material_table_material_category_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_material_table_ogneypornost_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_material_table_postavshiki_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_material_table_proizvoditeli_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_product_table_material_table" ManuallyRouted="false" />
+        <AssociationConnector Association="potteryModel.FK_product_table_workers_table" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

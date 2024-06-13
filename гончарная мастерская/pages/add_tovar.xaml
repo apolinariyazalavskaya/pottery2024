@@ -1,0 +1,57 @@
+﻿<Page x:Class="гончарная_мастерская.pages.add_tovar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:гончарная_мастерская.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="add_tovar">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+            <StackPanel Orientation="Horizontal">
+            <StackPanel  HorizontalAlignment="Left">
+                <TextBlock Text="код товара" Height="30" Width="250" x:Name="tbid" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="артикул" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="название товара" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="категория товара" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="цена" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="цвет" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18" />
+                <TextBlock Text="материал" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18" />
+                <TextBlock Text="мастер изготовитель" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="длина" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18" TextWrapping="Wrap"/>
+                <TextBlock Text="ширина" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="высота" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+                <TextBlock Text="фото" Height="30" Width="250" Margin="5" FontFamily="Comic Sans MS" FontSize="18"/>
+
+                <Button  VerticalAlignment="Bottom" x:Name="btnsave" Content="сохранить" Width="150" Click="btnsave_Click" Background="#b24e26" FontSize="16" Foreground="White"
+                         Height="30" Margin="5" HorizontalAlignment="Left"  FontFamily="Comic Sans MS" ></Button>
+
+            </StackPanel>
+            <StackPanel  HorizontalAlignment="Left">
+                <TextBox x:Name="id" Text="{Binding id_product}" Height="30" Width="200" Margin="5"/>
+                <TextBox x:Name="articul" Text="{Binding articul}" Height="30" Width="200" Margin="5"/>
+                <TextBox x:Name="name" Text="{Binding name_product}" Height="30" Width="200" Margin="5"/>
+                <ComboBox x:Name="category" Width="200" Height="30" SelectedItem="{Binding kategory_product_table}"  DisplayMemberPath="name_kategory" Margin="5"></ComboBox>
+                <TextBox x:Name="price" Text="{Binding price}" Height="30" Width="200" Margin="5"/>
+                <ComboBox x:Name="color" Width="200" Height="30"  Margin="5" SelectedItem="{Binding color_table}"  DisplayMemberPath="color_name"></ComboBox>
+                <ComboBox x:Name="material" Width="200" Height="30"  Margin="5" SelectedItem="{Binding material_table}"  DisplayMemberPath="name_material"></ComboBox>
+                <ComboBox x:Name="workers" Width="200" Height="30" SelectedItem="{Binding workers_table}" DisplayMemberPath="id_workers" Margin="5"></ComboBox>
+                <TextBox x:Name="lenght" Text="{Binding lenght}" Height="30" Width="200" Margin="5"/>
+                <TextBox x:Name="width" Text="{Binding width}" Height="30" Width="200" Margin="5"/>
+                <TextBox x:Name="height" Text="{Binding height}" Margin="5" Height="30" Width="200"/>
+                <StackPanel Orientation="Vertical">
+                    <Image x:Name="ImPhoto" Source="{Binding Path=GetPhoto}" Height="30" Width="200" Margin="5"/>
+                    <Button  VerticalAlignment="Bottom"  x:Name="btnLoad" Content="загрузить фото" Width="150" Click="btnLoad_Click" Background="#b24e26" FontSize="16" Foreground="White"  Height="30" FontFamily="Comic Sans MS" ></Button>
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
